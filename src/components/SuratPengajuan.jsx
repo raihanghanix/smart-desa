@@ -194,7 +194,28 @@ function SuratPengajuan({ currUser, isAdmin, ketuaRt }) {
       <div className="">
         <hr className="border border-neutral-600" />
       </div>
-      npm
+      <div className="flex justify-between items-center gap-4">
+        <div className="flex-1">
+          <input
+            className="w-full"
+            type="text"
+            name="search"
+            placeholder="Cari..."
+          />
+        </div>
+        {!isAdmin && (
+          <div className="flex-initial">
+            <button
+              onClick={() => {
+                handleClick();
+              }}
+              className="bg-black text-white py-2 px-4 rounded-lg hover:scale-105"
+            >
+              Ajukan Surat
+            </button>
+          </div>
+        )}
+      </div>
       <div className="w-full">
         {dataPengajuan.length > 0 ? (
           <table className="border-collapse w-full text-sm">

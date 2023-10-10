@@ -80,6 +80,34 @@ function Login() {
           >
             Login
           </button>
+          <button
+            className="mt-2 py-2 px-4 border border-black text-black rounded-lg hover:scale-105"
+            type="submit"
+            onClick={(e) => {
+              setNik("1571071303040060");
+              setPass("john123");
+              const id = setTimeout(() => {
+                handleSubmit(e);
+              }, 200);
+              clearTimeout(id);
+            }}
+          >
+            Langsung Login sebagai Admin &rarr;
+          </button>
+          <button
+            className="mt-2 py-2 px-4 border border-black text-black rounded-lg hover:scale-105"
+            type="submit"
+            onClick={(e) => {
+              setNik("1571071303040069");
+              setPass("123123");
+              const id = setTimeout(() => {
+                handleSubmit(e);
+              }, 200);
+              clearTimeout(id);
+            }}
+          >
+            Langsung Login sebagai User &rarr;
+          </button>
         </form>
         <p className="text-neutral-600 text-center">
           Belum register?{" "}
